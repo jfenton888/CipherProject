@@ -6,6 +6,14 @@ class MorseCode(inMessage, language):
 		self.transBack = transBack
 		self.send = send
 
+	def transTo():
+
+	def transBack():
+
+	def send():
+
+	
+
 
 
 #letters changed
