@@ -1,8 +1,10 @@
 #morse code
-class MorseCode(message):
+class MorseCode(inMessage, language):
 	"""docstring for MorseCode"""
 	def __init__(self, arg):
-		self.arg = arg
+		self.transTo = transTo
+		self.transBack = transBack
+		self.send = send
 
 
 
