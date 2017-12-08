@@ -23,7 +23,7 @@ class MorseCode(inMessage, language):
 
 #letters changed
 class Cypher(inMessage, language):
-	"""docstring for MorseCode"""
+
 
 
 	def __init__(self, arg):
@@ -35,6 +35,8 @@ class Cypher(inMessage, language):
 
 	def transTo():
 		msg = str(input('Please input the text you would like to have translated'))
+		MSG = msg.strip().lower().split(" ")
+
 
 
 
@@ -43,8 +45,8 @@ class Cypher(inMessage, language):
 	def send():
 
 	def diction():
-		diction = diction = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-				  []
+		diction = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+				  
 
 #symbols
 
