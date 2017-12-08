@@ -1,7 +1,7 @@
 class Cipher(inMessage, inLanguage):
 	
 	def __init__(self, chooseLanguage):
-		slef.chooseLanguage = inLanguage
+		self.chooseLanguage = inLanguage
 
 	class MorseCode(inMessage):
 		"""docstring for MorseCode"""
@@ -13,18 +13,19 @@ class Cipher(inMessage, inLanguage):
 			self.send = send
 			self.diction = diction
 
-
 		def transTo():
-			letter1= letter
+			for i in range(len(inMessage)):
+				outMessage[i] = self.diction(i)
+
 		def transBack():
 
 		def send():
 
-		def diction():
-			diction = 
-			['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'][
-			 '•–', '–•••', '–•–•', '–••', '•', '••–•', '––•', '••••', '••', '•–––', '–•–', '•–••', '––', '–•', '–––', '•––•', '––•–', '•–•', '•••', '–', '••–', '•••–', '•––', '–••–', '–•––', '––••', '–––––', '•––––', '••–––', '•••––', '••••–', '•••••', '–••••', '––•••', '–––••', '––––•', '']
+		def diction(i):
 
+			
+			corespond = [['abcdefghijklmnopqrstuvwxyz0123456789'],['•– ', '–••• ', '–•–• ', '–•• ', '• ', '••–• ', '––• ', '•••• ', '•• ', '•––– ', '–•– ', '•–•• ', '–– ', '–• ', '––– ', '•––• ', '––•– ', '•–• ', '••• ', '– ', '••– ', '•••– ', '•–– ', '–••– ', '–•–– ', '––•• ', '––––– ', '•–––– ', '••––– ', '•••–– ', '••••– ', '••••• ', '–•••• ', '––••• ', '–––•• ', '––––• ', '']]
+			return corespond[1][corespond[0][0].find(word[i])]
 
 	#letters changed
 
