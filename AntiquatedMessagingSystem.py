@@ -1,34 +1,46 @@
-class Cipher(inMessage, inLanguage):
+# class Cipher(inMessage, inLanguage):
 	
-	def __init__(self, chooseLanguage):
-		self.chooseLanguage = inLanguage
+# 	def __init__(self, chooseLanguage):
+# 		self.chooseLanguage = inLanguage
 
-	class MorseCode(inMessage):
-		"""docstring for MorseCode"""
+class MorseCode:
+	"""docstring for MorseCode"""
 
+	def __init__(self):
+		self.diction = [[' abcdefghijklmnopqrstuvwxyz0123456789'],[' ', '•– ', '–••• ', '–•–• ', '–•• ', '• ', '••–• ', '––• ', '•••• ', '•• ', '•––– ', '–•– ', '•–•• ', '–– ', '–• ', '––– ', '•––• ', '––•– ', '•–• ', '••• ', '– ', '••– ', '•••– ', '•–– ', '–••– ', '–•–– ', '––•• ', '––––– ', '•–––– ', '••––– ', '•••–– ', '••••– ', '••••• ', '–•••• ', '––••• ', '–––•• ', '––––• ', '']]
+		self.outMessage = []
 
-		def __init__(self, arg):
-			self.transTo = transTo
-			self.transBack = transBack
-			self.send = send
-			self.diction = diction
+	def transTo(self, inMessage):
 
-		def transTo():
-			for i in range(len(inMessage)):
-				outMessage[i] = self.diction(i)
-
-		def transBack():
-
-		def send():
-
-		def diction(i):
-
-			
-			corespond = [[' abcdefghijklmnopqrstuvwxyz0123456789'],[' ', '•– ', '–••• ', '–•–• ', '–•• ', '• ', '••–• ', '––• ', '•••• ', '•• ', '•––– ', '–•– ', '•–•• ', '–– ', '–• ', '––– ', '•––• ', '––•– ', '•–• ', '••• ', '– ', '••– ', '•••– ', '•–– ', '–••– ', '–•–– ', '––•• ', '––––– ', '•–––– ', '••––– ', '•••–– ', '••••– ', '••••• ', '–•••• ', '––••• ', '–––•• ', '––––• ', '']]
-			return corespond[1][corespond[0][0].find(word[i])]
-
-	#letters changed
+		for i in range(len(inMessage)):
+			# print(i)
+			# print(len(inMessage))
+			# print(inMessage[i])
+			#print(self.diction[0][0].find(inMessage[i]))
+			# print(self.diction[1][self.diction[0][0].find(inMessage[i])])
+			# print(self.diction[1][0])
+			code = (self.diction[1][self.diction[0][0].find(inMessage[i])])
+			(self.outMessage).append(code)
+		return MorseCode.send()
 
 
-	#symbols
+	def send(self):
+		message = ''.join(self.outMessage)
+		return message
 
+	# def diction(self):
+
+		
+	# 	corespond = [[' abcdefghijklmnopqrstuvwxyz0123456789'],[' ', '•– ', '–••• ', '–•–• ', '–•• ', '• ', '••–• ', '––• ', '•••• ', '•• ', '•––– ', '–•– ', '•–•• ', '–– ', '–• ', '––– ', '•––• ', '––•– ', '•–• ', '••• ', '– ', '••– ', '•••– ', '•–– ', '–••– ', '–•–– ', '––•• ', '––––– ', '•–––– ', '••––– ', '•••–– ', '••••– ', '••••• ', '–•••• ', '––••• ', '–––•• ', '––––• ', '']]
+	# 	return 
+
+#letters changed
+
+
+#symbols
+
+MorseCode = MorseCode()
+
+
+messIn = input('what should become MorseCode? ')
+print(MorseCode.transTo(messIn))
