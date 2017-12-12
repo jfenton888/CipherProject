@@ -83,12 +83,5 @@ class Cipher(inMessage, inLanguage):
 
 
 
-'''
-cipher = Cipher()
-morse = Cipher.MorseCode
-morse.
-	#letters changed
 
-'''
-	#symbols
 
